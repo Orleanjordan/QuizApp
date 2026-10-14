@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Quizzappp</string>
+    <string name="prompt_Header">AP HISTORY</string>
+    <string name="num_QHeader">QUESTION 1 OF 10</string>
+    <string name="q_Screen">Question text</string>
+    <string name="true_BTN">True</string>
+    <string name="false_BTN">False</string>
+    <string name="next_Q">NEXT QUESTION</string>
+    <string name="finish_BTN">FINISHED — VIEW SCORE</string>\
+
+
+
+            <!--    Music Questions  -->
+    <string name="q_Beethoven">Ludwig van Beethoven continued to compose and write music after going completely deaf</string>   
+<!--   true -->
+    
+    
+    <string name="q_Mozart">Wolfgang Amadeus Mozart was born in Russia</string>
+<!--   False -->
+
+    <string name="q_Handel">George Frideric Handel wrote the famous oratorio "Messiah"</string>
+<!--   true -->
+
+    <string name="q_Cello">The cello is the largest stringed instrument in a standard orchestra</string>
+<!--    False(the double bass/contrabass)-->
+    
+    <string name="q_Vivaldi">Antonio Vivaldi was famously nick named "The red Priest" because of his hair color and ordination. </string>
+<!--   True -->
+    <string name="q_piano">A standard, modern piano has 89 keys in total, including the black keys</string>
+<!--    False(88)-->
+    <string name="q_piccolo">The piccolo has the highest pitch of any standard instrument in the orchestra</string>
+<!--    True-->
+
+    <string name="q_Bach">Johann Sebastian Bach had only 3 children throughout his life.</string>
+<!--    false (20 children)-->
+
+    <string name="q_forte">The Italian musical term "forte" means soft or quiet.</string>
+<!--   False -->
+    <string name="q_Edvard">The song "In the Hall of the Mountain King" was composed by the French composer Claude Debussy.</string>
+<!--    false written by Edvard Grieg -->
+</resources>

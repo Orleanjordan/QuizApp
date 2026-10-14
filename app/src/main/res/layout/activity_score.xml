@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#F3F6FB">
+
+    <TextView
+        android:id="@+id/scoreTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUIZ RESULTS"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#17365D" />
+
+    <TextView
+        android:id="@+id/scoreDisplayTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Score: 100%"
+        android:textSize="24sp"
+        android:textColor="#172B4D" />
+
+</LinearLayout>
