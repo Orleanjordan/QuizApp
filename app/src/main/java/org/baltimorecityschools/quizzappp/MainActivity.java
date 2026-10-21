@@ -1,5 +1,5 @@
-
 package org.baltimorecityschools.quizzappp;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,33 +8,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-// questions = {
-//    "The Declaration of Independence was adopted in 1776.",
-//    "The Articles of Confederation created a strong national government with power to tax.",
-///// ////    "The U.S. Constitution created three branches of the federal government.",
-///// ////    "The Louisiana Purchase was made during Thomas Jefferson's presidency.",
-///// ////    "The Civil War began in 1861.",
-//    "The Emancipation Proclamation immediately freed enslaved people in every state and territory.",
-//    "The 19th Amendment prohibited denying the vote on the basis of sex.",
-//    "The United States entered World War I in 1917.",
-//    "The Great Depression began before the 1929 stock market crash.",
-//   "The United States entered World War II after the attack on Pearl Harbor."
-///    };
-
 
 import org.baltimorecityschools.quizzappp.R;
 
 public class MainActivity extends AppCompatActivity {
 
-
     Button trueButton, falseButton, nextButton, finishedButton;
 
-    Question q1,q2, q3, q4,q5, q6, q7, q8, q9,q10;
-    TextView questionTV;
+    Question q1, q2, q3, q4, q5, q6, q7, q8, q9, q10;
+    TextView questionTV, questionNumberTV;
     Question currentQ;
 
-    Question [] questionsBank;
-    int currentNum ;
+    Question[] questionsBank;
+    int currentNum;
     int score;
 
     boolean userAns;
@@ -54,34 +40,34 @@ public class MainActivity extends AppCompatActivity {
         q8 = new Question(getString(R.string.q_Bach), false);
         q9 = new Question(getString(R.string.q_forte), false);
         q10 = new Question(getString(R.string.q_Edvard), false);
-        questionsBank = new Question[]{q1, q2, q3 ,q4, q5, q6, q7 ,q8 ,q9, q10};
+        questionsBank = new Question[]{q1, q2, q3, q4, q5, q6, q7, q8, q9, q10};
 
         currentNum = 0;
         score = 0;
         currentQ = questionsBank[currentNum];
 
-
-        questionTV =findViewById(R.id.questionText);
+        questionTV = findViewById(R.id.questionText);
+        questionNumberTV = findViewById(R.id.questionNumberText); // Connected XML ID to Java
         trueButton = findViewById(R.id.trueButton);
         falseButton = findViewById(R.id.falseButton);
         nextButton = findViewById(R.id.nextButton);
         finishedButton = findViewById(R.id.finishedButton);
 
+        // Sets the initial layout header text to "Question 1 of 10" when the app opens
+        questionNumberTV.setText("Question " + (currentNum + 1) + " of " + questionsBank.length);
 
         trueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 userAns = true;
-                if( userAns == currentQ.getcorrectAns() ){
+                if (userAns == currentQ.getcorrectAns()) {
                     Toast.makeText(MainActivity.this,
                             "You are right", Toast.LENGTH_SHORT).show();
-                    score ++;
-                }else {
+                    score++;
+                } else {
                     Toast.makeText(MainActivity.this,
                             "You are wrong", Toast.LENGTH_SHORT).show();
-
                 }
-
             }
         });
 
@@ -89,14 +75,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 userAns = false;
-                if( userAns == currentQ.getcorrectAns() ){
+                if (userAns == currentQ.getcorrectAns()) {
                     Toast.makeText(MainActivity.this,
                             "You are right", Toast.LENGTH_SHORT).show();
-                    score ++;
-                }else {
+                    score++;
+                } else {
                     Toast.makeText(MainActivity.this,
                             "You are wrong", Toast.LENGTH_SHORT).show();
-
                 }
             }
         });
@@ -104,41 +89,31 @@ public class MainActivity extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if(currentNum < questionsBank.length -1 ){
-
+                if (currentNum < questionsBank.length - 1) {
                     Toast.makeText(MainActivity.this,
                             "Next question!", Toast.LENGTH_SHORT).show();
-                    currentNum ++;
+                    currentNum++;
                     currentQ = questionsBank[currentNum];
+
+                    // Updates the question text
                     questionTV.setText(currentQ.getqPrompt());
-                }else{
-                    Toast.makeText(MainActivity.this,"No more questions, click Finish Button", Toast.LENGTH_SHORT).show();;
+
+                    // Updates the question number display dynamically (e.g. Question 2 of 10)
+                    questionNumberTV.setText("Question " + (currentNum + 1) + " of " + questionsBank.length);
+                } else {
+                    Toast.makeText(MainActivity.this, "No more questions, click Finish Button", Toast.LENGTH_SHORT).show();
                 }
-
-
-
             }
         });
 
         finishedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent finishIntent = new Intent( MainActivity.this,  ScoreActivity.class );
+                Intent finishIntent = new Intent(MainActivity.this, ScoreActivity.class);
                 finishIntent.putExtra("SCORE_KEY", score);
                 finishIntent.putExtra("TOTAL_KEY", questionsBank.length);
                 startActivity(finishIntent);
-
-
-
-
-
             }
         });
-
-
-
-
     }
 }

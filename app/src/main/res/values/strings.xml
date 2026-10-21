@@ -1,12 +1,23 @@
 <resources>
     <string name="app_name">Quizzappp</string>
-    <string name="prompt_Header">AP HISTORY</string>
+
+    <string name="prompt_Header">Music</string>
+
     <string name="num_QHeader">QUESTION 1 OF 10</string>
+
     <string name="q_Screen">Question text</string>
+
     <string name="true_BTN">True</string>
+
     <string name="false_BTN">False</string>
+
     <string name="next_Q">NEXT QUESTION</string>
-    <string name="finish_BTN">FINISHED — VIEW SCORE</string>\
+
+    <string name="finish_BTN">FINISHED — VIEW SCORE</string>
+
+    <string name="quiz_title">Quiz Title</string>
+
+    <string name="Score">Score: </string>
 
 
 

@@ -11,7 +11,7 @@
         android:id="@+id/scoreTitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="QUIZ RESULTS"
+        android:text="@string/quiz_title"
         android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="#17365D" />
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Score: 100%"
+        android:text="Score: "
         android:textSize="24sp"
         android:textColor="#172B4D" />
 
