@@ -15,8 +15,9 @@ public class MainActivity extends AppCompatActivity {
 
     Button trueButton, falseButton, nextButton, finishedButton;
 
+    Button languageButton;
     Question q1, q2, q3, q4, q5, q6, q7, q8, q9, q10;
-    TextView questionTV, questionNumberTV;
+    TextView questionTV, questionNumberTV; // Added questionNumberTV variable
     Question currentQ;
 
     Question[] questionsBank;
@@ -53,8 +54,10 @@ public class MainActivity extends AppCompatActivity {
         nextButton = findViewById(R.id.nextButton);
         finishedButton = findViewById(R.id.finishedButton);
 
-        // Sets the initial layout header text to "Question 1 of 10" when the app opens
+
         questionNumberTV.setText("Question " + (currentNum + 1) + " of " + questionsBank.length);
+
+
 
         trueButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
                             "Next question!", Toast.LENGTH_SHORT).show();
                     currentNum++;
                     currentQ = questionsBank[currentNum];
+
 
                     // Updates the question text
                     questionTV.setText(currentQ.getqPrompt());

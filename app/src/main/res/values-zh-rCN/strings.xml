@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Header Prompt -->
+    <string name="prompt_Header">音乐测验</string>
+    <string name="num_QHeader">第 1 题（共 10 题）</string>
+
+    <!-- Buttons -->
+    <string name="true_BTN">正确</string>
+    <string name="false_BTN">错误</string>
+    <string name="next_Q">下一题</string>
+    <string name="finish_BTN">结束测验</string>
+
+    <!-- Quiz Questions (Be sure to check your answers!) -->
+    <string name="q_Beethoven">贝多芬写了九首交响曲吗？</string>
+    <string name="q_Mozart">莫扎特发明了钢琴吗？</string>
+    <string name="q_Handel">韩德尔创作了《弥赛亚》吗？</string>
+    <string name="q_Cello">大提琴是木管乐器吗？</string>
+    <string name="q_Vivaldi">维瓦尔第创作了《四季》吗？</string>
+    <string name="q_piano">钢琴有100个键吗？</string>
+    <string name="q_piccolo">短笛比长笛音调更高吗？</string>
+    <string name="q_Bach">巴赫生活在浪漫主义时期吗？</string>
+    <string name="q_forte">Forte在音乐中意味着保持安静吗？</string>
+    <string name="q_Edvard">爱德华·格里格来自意大利吗？</string>
+</resources>
